@@ -164,13 +164,6 @@ async function run() {
     app.get("/submissions", async (req, res) => {
       const submissions = await submissionsCollection.find({}).toArray();
       res.send(submissions);
-      // try {
-      //   const submissions = await submissionsCollection.find({}).toArray();
-      //   res.send(submissions);
-      // } catch (error) {
-      //   console.error("Error fetching submissions:", error);
-      //   res.status(500).send({ message: "Failed to fetch submissions" });
-      // }
     });
 
     // Get all submissions for a specific user
