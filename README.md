@@ -5,7 +5,7 @@
 # Study Sphere: A Study Sphere Application  
 
 ## Live Site URL  
-[Visit Study Sphere](https://github.com/programming-hero-web-course2/b10a11-server-side-fakrul-hossain.git)  
+[Visit Study Sphere](https://study-sphere-fakrul.netlify.app/)  
 
 ## About  
 Study Sphere is a dynamic and secure Study Sphere platform designed to connect creators, entrepreneurs, and individuals with a supportive community. Whether you're raising funds for personal needs, startups, or creative projects, Study Sphere  makes it easy to share your campaign and receive contributions.  
