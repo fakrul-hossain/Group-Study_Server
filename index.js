@@ -102,10 +102,7 @@ async function run() {
     // Get assignments created by a specific user
     app.get("/assignments/:email", verifyToken, async (req, res) => {
       const email = req.params.email;
-      // const decodedEmail = req.user?.email;
-      // if (decodedEmail !== email) {
-      //   return res.status(401).send({ message: 'unauthorized access' });
-      // }
+
       const query = { creatorEmail: email };
       const result = await assignmentsCollection.find(query).toArray();
       res.send(result);
