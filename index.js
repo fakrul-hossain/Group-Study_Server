@@ -169,10 +169,6 @@ async function run() {
     // Get all submissions for a specific user
     app.get("/submissions/:email", verifyToken, async (req, res) => {
       const email = req.params.email;
-      // const decodedEmail = req.user?.email;
-      // if (decodedEmail !== email) {
-      //   return res.status(401).send({ message: 'unauthorized access' });
-      // }
       const query = { userEmail: email.trim().toLowerCase() };
       // const query = { userEmail: email };
       const result = await submissionsCollection.find(query).toArray();
