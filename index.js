@@ -174,23 +174,7 @@ async function run() {
       const result = await submissionsCollection.find(query).toArray();
       res.send(result);
     });
-    // app.get('/submissions/:id', async (req, res) => {
-    //   const id = req.params.id;
-    //   const query = { _id: new ObjectId(id) };
-    //   const result = await submissionsCollection.findOne(query);
-    //   res.send(result);
-    // });
-    // app.put('/submissions/:id', async (req, res) => {
-    //   const id = req.params.id;
-    //   const updatedData = req.body;
-    //   console.log("Update request data:", req.body);
 
-    //   const query = { _id: new ObjectId(id) };
-    //   const update = { $set: updatedData };
-    //   const options = { upsert: true };
-    //   const result = await submissionsCollection.updateOne(query, update, options);
-    //   res.send(result);
-    // });
 
     app.patch("/submissions/:id", verifyToken, async (req, res) => {
       try {
