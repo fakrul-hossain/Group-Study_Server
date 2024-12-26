@@ -112,14 +112,13 @@ async function run() {
     app.get("/assignments/search", async (req, res) => {
       const { title, difficultyLevel } = req.query; // Get search parameters from query string
 
-      // Build the query object dynamically based on provided filters
       const query = {};
 
       if (title) {
-        query.title = { $regex: title, $options: "i" }; // Case-insensitive search for title
+        query.title = { $regex: title, $options: "i" }; 
       }
       if (difficultyLevel) {
-        query.difficultyLevel = difficultyLevel; // Exact match for difficulty level
+        query.difficultyLevel = difficultyLevel; 
       }
 
       try {
