@@ -93,7 +93,7 @@ async function run() {
       res.send(result);
     });
     // get specific assignment by id
-    app.get("/assignments/:id", verifyToken, async (req, res) => {
+    app.get("/assignments/:id",  async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) };
       const result = await assignmentsCollection.findOne(query);
@@ -156,7 +156,7 @@ async function run() {
     });
 
     // Submit an assignment
-    app.post("/submissions", verifyToken, async (req, res) => {
+    app.post("/submissions", async (req, res) => {
       const submission = req.body;
       const result = await submissionsCollection.insertOne(submission);
       res.send(result);
@@ -176,7 +176,7 @@ async function run() {
     });
 
 
-    app.patch("/submissions/:id", verifyToken, async (req, res) => {
+    app.patch("/submissions/:id", async (req, res) => {
       try {
         const id = req.params.id; // Get the submission ID from the request parameters
         const { obtainMarks, feedback, status } = req.body; // Extract updated fields from the request body

@@ -22,8 +22,5 @@ Study Sphere is a dynamic and secure Study Sphere platform designed to connect c
 ## How to Get Started  
 1. Clone the repository.  
    ```bash
-   git clone https://github.com/programming-hero-web-course2/b10-a10-server-side-fakrul-hossain
-# b10a11-client-side-fakrul-hossain
-"# b10a11-client-side-fakrul-hossain" 
-"# b10a11-client-side-fakrul-hossain" 
-"# Group-Study_Server" 
+   git clone https://github.com/fakrul-hossain/Group-Study_Server
+
